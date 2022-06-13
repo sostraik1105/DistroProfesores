@@ -1,10 +1,10 @@
-package service;
+package com.sostraik1903.distroprofes_v3.service;
 
-import entity.Curso;
+import com.sostraik1903.distroprofes_v3.entity.Curso;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.CursoRepository;
+import com.sostraik1903.distroprofes_v3.repository.CursoRepository;
 
 import java.util.Collection;
 

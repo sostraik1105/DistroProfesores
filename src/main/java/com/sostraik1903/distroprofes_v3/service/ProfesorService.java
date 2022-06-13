@@ -1,6 +1,6 @@
-package service;
+package com.sostraik1903.distroprofes_v3.service;
 
-import entity.Profesor;
+import com.sostraik1903.distroprofes_v3.entity.Profesor;
 
 import java.util.Collection;
 

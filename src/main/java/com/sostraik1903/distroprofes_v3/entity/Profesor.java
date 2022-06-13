@@ -1,4 +1,4 @@
-package entity;
+package com.sostraik1903.distroprofes_v3.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 

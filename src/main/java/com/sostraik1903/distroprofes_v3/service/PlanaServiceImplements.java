@@ -1,10 +1,10 @@
-package service;
+package com.sostraik1903.distroprofes_v3.service;
 
-import entity.Plana;
+import com.sostraik1903.distroprofes_v3.entity.Plana;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.PlanaRepository;
+import com.sostraik1903.distroprofes_v3.repository.PlanaRepository;
 
 import java.util.Collection;
 
