@@ -40,4 +40,9 @@ public class CursoServiceImplements implements CursoService{
     public Collection<Curso> findAll() {
         return cursoRepository.findAll();
     }
+
+    @Override
+    public Collection<Object[]> findAllWithProfesores() {
+        return cursoRepository.findAllWithProfesores();
+    }
 }

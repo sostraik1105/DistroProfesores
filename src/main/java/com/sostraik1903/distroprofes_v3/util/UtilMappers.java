@@ -1,13 +1,7 @@
 package com.sostraik1903.distroprofes_v3.util;
 
-import com.sostraik1903.distroprofes_v3.entity.Curso;
-import com.sostraik1903.distroprofes_v3.entity.Encargado;
-import com.sostraik1903.distroprofes_v3.entity.Plana;
-import com.sostraik1903.distroprofes_v3.entity.Profesor;
-import com.sostraik1903.distroprofes_v3.mapper.CursoMapper;
-import com.sostraik1903.distroprofes_v3.mapper.EncargadoMapper;
-import com.sostraik1903.distroprofes_v3.mapper.PlanaMapper;
-import com.sostraik1903.distroprofes_v3.mapper.ProfesorMapper;
+import com.sostraik1903.distroprofes_v3.entity.*;
+import com.sostraik1903.distroprofes_v3.mapper.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -52,6 +46,16 @@ public class UtilMappers {
         for(Encargado encargado : encargados){
             EncargadoMapper encargadoMapper = new EncargadoMapper(encargado);
             mapper.add(encargadoMapper);
+        }
+        return mapper;
+    }
+
+    public static Collection<CursoProfesorMapper> toCursoProfesor(Collection<CursoProfesor> cursoProfesores){
+        Collection<CursoProfesorMapper> mapper = new ArrayList<>();
+
+        for(CursoProfesor cursoProfesor : cursoProfesores){
+            CursoProfesorMapper cursoProfesorMapper = new CursoProfesorMapper(cursoProfesor);
+            mapper.add(cursoProfesorMapper);
         }
         return mapper;
     }

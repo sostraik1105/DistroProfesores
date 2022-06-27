@@ -29,9 +29,13 @@ public class Curso implements Serializable {
             joinColumns = @JoinColumn(name = "idCurso"),
             inverseJoinColumns = @JoinColumn(name = "idProfesor")
     )
-    Set<Profesor> profesores = new HashSet<>();
+    private Set<Profesor> profesores = new HashSet<>();
 
     public Curso() {
+    }
+
+    public void addProfesor(Profesor profesor){
+        this.profesores.add(profesor);
     }
 
     public Curso(Integer idCurso, String nombre, Integer numAlumnos, Integer duracion) {

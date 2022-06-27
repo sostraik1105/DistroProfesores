@@ -10,4 +10,5 @@ public interface CursoService {
     public abstract void delete(Integer cursoId);
     public abstract Curso findById(Integer cursoId);
     public abstract Collection<Curso> findAll();
+    public abstract Collection<Object[]> findAllWithProfesores();
 }
