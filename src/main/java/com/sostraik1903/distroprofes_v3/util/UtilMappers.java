@@ -59,4 +59,24 @@ public class UtilMappers {
         }
         return mapper;
     }
+
+    public static Collection<UserMapper> toUsers(Collection<UserVO> users){
+        Collection<UserMapper> mapper = new ArrayList<>();
+
+        for(UserVO user : users){
+            UserMapper userMapper = new UserMapper(user);
+            mapper.add(userMapper);
+        }
+        return mapper;
+    }
+
+    public static Collection<RoleMapper> toRole(Collection<RoleVO> roles){
+        Collection<RoleMapper> mapper = new ArrayList<>();
+
+        for(RoleVO role : roles){
+            RoleMapper roleMapper = new RoleMapper(role);
+            mapper.add(roleMapper);
+        }
+        return mapper;
+    }
 }
