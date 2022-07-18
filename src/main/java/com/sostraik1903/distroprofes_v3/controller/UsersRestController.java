@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -18,8 +19,6 @@ public class UsersRestController {
 
     @Autowired
     private UserService userService;
-
-    private BCryptPasswordEncoder passwordEncoder;
 
     @GetMapping("/listar")
     public ResponseEntity<?> listar_GET(){
@@ -61,6 +60,8 @@ public class UsersRestController {
     ){
         UserVO userDb = userService.findById(userId);
 
+        // Para actualizar y encriptar...
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String hash = passwordEncoder.encode(userDb.getPassword());
 
         if(userDb != null){
